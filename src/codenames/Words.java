@@ -20,7 +20,7 @@ public class Words
 	
 	public ArrayList<String> getList()
 	{
-		ArrayList<String> words = new ArrayList<String>();
+		
 		idNum = rand.nextInt(2);
 		for (int i=0; i<=24; i++) //pulls 25 random words and also sets up numList
 		{
@@ -30,6 +30,11 @@ public class Words
 			words.add(list.get(num));
 			list.remove(num);
 		}
+		return words;
+	}
+	
+	public ArrayList<String> returnList()
+	{
 		return words;
 	}
 	
@@ -127,6 +132,7 @@ public class Words
 	
 	int counter = 25; //counts how many numbers remaining in the numList
 	Random rand = new Random();
+	private ArrayList<String> words = new ArrayList<String>();
 	private ArrayList<Integer> blueList = new ArrayList<Integer>();
 	private ArrayList<Integer> redList = new ArrayList<Integer>();
 	private ArrayList<Integer> numList = new ArrayList<Integer>();
